@@ -11,8 +11,8 @@ public class PoolManager : MonoBehaviour
     private void Awake() {
         _pools = new List<GameObject>[Prefabs.Length];
 
-        foreach (var pool in _pools) {
-            pool = new List<GameObject>();
+        for (int i = 0; i < _pools.Length; i++) {
+            _pools[i] = new List<GameObject>();
         }
     }
 
