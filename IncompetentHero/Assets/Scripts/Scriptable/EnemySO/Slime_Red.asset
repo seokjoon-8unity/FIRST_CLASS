@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 459b2a491957fec4ebe4d4b5b0fae764, type: 3}
   m_Name: Slime_Red
   m_EditorClassIdentifier: 
-  _enemyName: "\uCD08\uB85D \uC2AC\uB77C\uC784"
-  _spriteType: 0
+  _enemyName: "\uBE68\uAC04 \uC2AC\uB77C\uC784"
+  _spriteType: 1
   _stage: 0
