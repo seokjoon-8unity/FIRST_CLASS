@@ -15,4 +15,14 @@ public class Enemy : MonoBehaviour
     private void OnEnable() {
         _name = _enemySO.EnemyName;
     }
+
+    private void OnTriggerEnter2D(Collider2D other) {
+        if(other.gameObject.CompareTag("Player")) {
+            GameManager.GetInstance().HP--;
+            gameObject.SetActive(false);
+        }
+        if(other.gameObject.CompareTag("Ground")) {
+            gameObject.SetActive(false);
+        }
+    }
 }

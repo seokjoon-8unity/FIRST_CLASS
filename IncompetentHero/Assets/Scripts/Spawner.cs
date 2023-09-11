@@ -16,13 +16,13 @@ public class Spawner : MonoBehaviour
         // 현재 스테이지에 따라 스폰 주기 조절
         switch(GameManager.GetInstance().Stage) {
             case StageName.SLIMENEST:
-                _spawnTerm = 3;
+                _spawnTerm = 0.7f;
                 break;
             case StageName.BLABLADESART:
-                _spawnTerm = 3;
+                _spawnTerm = 0.5f;
                 break;
             case StageName.FORGOTTENFOREST:
-                _spawnTerm = 3;
+                _spawnTerm = 0.3f;
                 break;
         }
     }
