@@ -95,7 +95,7 @@ NavMeshSettings:
   serializedVersion: 2
   m_ObjectHideFlags: 0
   m_BuildSettings:
-    serializedVersion: 2
+    serializedVersion: 3
     agentTypeID: 0
     agentRadius: 0.5
     agentHeight: 2
@@ -108,7 +108,13 @@ NavMeshSettings:
     cellSize: 0.16666666
     manualTileSize: 0
     tileSize: 256
+<<<<<<<< HEAD:IncompetentHero/Assets/Scenes/MainScene.unity
+    buildHeightMesh: 0
+    maxJobWorkers: 0
+    preserveTilesOutsideBounds: 0
+========
     accuratePlacement: 0
+>>>>>>>> 93e59ceb78cb1d7d86f73be3a878ee6821881e5b:IncompetentHero/Assets/TextMesh Pro/Examples & Extras/Scenes/21 - Script Example.unity
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
@@ -150,10 +156,26 @@ Camera:
   m_ClearFlags: 1
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0.019607844}
   m_projectionMatrixMode: 1
+<<<<<<<< HEAD:IncompetentHero/Assets/Scenes/MainScene.unity
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
+  m_Iso: 200
+  m_ShutterSpeed: 0.005
+  m_Aperture: 16
+  m_FocusDistance: 10
+  m_FocalLength: 50
+  m_BladeCount: 5
+  m_Curvature: {x: 2, y: 11}
+  m_BarrelClipping: 0.25
+  m_Anamorphism: 0
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+========
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
   m_GateFitMode: 2
   m_FocalLength: 50
+>>>>>>>> 93e59ceb78cb1d7d86f73be3a878ee6821881e5b:IncompetentHero/Assets/TextMesh Pro/Examples & Extras/Scenes/21 - Script Example.unity
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -190,6 +212,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -28.517307}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
