@@ -8,6 +8,6 @@ public class SceneController : MonoBehaviour
 
     public void SwitchScene()
     {
-        SceneManager.LoadScene("MainScene");
+        SceneManager.LoadScene("StageSelect");
     }
 }
