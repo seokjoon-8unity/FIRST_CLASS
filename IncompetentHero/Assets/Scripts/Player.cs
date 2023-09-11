@@ -17,15 +17,8 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        
-
-
-
-
         GetInput();
         Move();
-
-        
     }
 
     private void GetInput()
