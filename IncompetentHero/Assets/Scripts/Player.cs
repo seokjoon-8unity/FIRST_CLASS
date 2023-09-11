@@ -31,5 +31,27 @@ public class Player : MonoBehaviour
     private void Move()
     {
         transform.Translate(moveVector * speed * Time.deltaTime);
+
+        ConstrainToCameraBounds();
+    }
+
+    /// <summary>
+    /// 카메라 경계 밖으로 플레이어가 못 나가게 한다.
+    /// </summary>
+    private void ConstrainToCameraBounds()
+    {
+        Vector3 viewPos = Camera.main.WorldToViewportPoint(transform.position);
+
+        if (viewPos.x < 0f)
+        {
+            viewPos.x = 0f;
+        }
+
+        if (viewPos.x > 1f)
+        {
+            viewPos.x = 1f;
+        }
+
+        transform.position = Camera.main.ViewportToWorldPoint(viewPos);
     }
 }
