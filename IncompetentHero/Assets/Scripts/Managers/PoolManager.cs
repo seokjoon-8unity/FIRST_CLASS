@@ -16,10 +16,11 @@ public class PoolManager : MonoBehaviour
         }
     }
 
-    public GameObject GetItemWithIndex(int index) {
+    // 스폰할 타입에 맞춰 기존에 생성했지만 사용하지 않는 객체가 있나 찾아주고, 없다면 만들어서 주는 함수
+    public GameObject GetItemWithIndex(SpawnType type) {
         GameObject select = null;
 
-        foreach (var item in _pools[index]) {
+        foreach (var item in _pools[(int)type]) {
             if(!item.activeSelf) {
                 select = item;
                 select.SetActive(true);
@@ -28,8 +29,8 @@ public class PoolManager : MonoBehaviour
         }
 
         if(!select) {
-            select = Instantiate(Prefabs[index], transform);
-            _pools[index].Add(select);
+            select = Instantiate(Prefabs[(int)type]);
+            _pools[(int)type].Add(select);
         }
 
         return select;
