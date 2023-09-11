@@ -8,3 +8,9 @@ public enum StageName {
     BLABLADESART,
     FORGOTTENFOREST
 }
+
+public enum HUDType {
+    LIFE,
+    TIMER,
+    BUFF
+}

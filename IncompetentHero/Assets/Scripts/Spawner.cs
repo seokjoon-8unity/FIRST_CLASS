@@ -40,13 +40,7 @@ public class Spawner : MonoBehaviour
     void Spawn() {
         GameObject go;
 
-        // 몬스터 8, 아이템 2의 비율로 스폰되게 설정
-        if(Random.Range(0, 100) <= 80) {
-            go = GameManager.GetInstance().PoolManager.GetItemWithIndex(SpawnType.ENEMY);
-        }
-        else {
-            go = GameManager.GetInstance().PoolManager.GetItemWithIndex(SpawnType.ITEM);
-        }
+        go = GameManager.GetInstance().PoolManager.GetItemWithIndex(0);
 
         go.transform.position = new Vector3(Random.Range(-_rangeX, _rangeX), _posY, 0);
     }
