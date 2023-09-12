@@ -25,7 +25,7 @@ public class Player : MonoBehaviour
     {
         moveVector.x = Input.GetAxisRaw("Horizontal");
 
-        //Debug.Log("moveVector: " + moveVector);
+        Debug.Log("moveVector: " + moveVector);
     }
 
     private void Move()
@@ -53,5 +53,14 @@ public class Player : MonoBehaviour
         }
 
         transform.position = Camera.main.ViewportToWorldPoint(viewPos);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Enemy")
+        {
+            Debug.Log("충돌했다.");
+            // 플레이어 HP를 감소시킨다.
+        }
     }
 }
