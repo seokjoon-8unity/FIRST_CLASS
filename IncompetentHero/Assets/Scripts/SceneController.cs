@@ -10,4 +10,9 @@ public class SceneController : MonoBehaviour
     {
         SceneManager.LoadScene("StageSelect");
     }
+
+    public void CutScene1End() // 컷씬 1 끝나면 스테이지 셀렉트 화면으로
+    {
+        SceneManager.LoadScene("StageSelect");
+    }
 }
