@@ -9,7 +9,6 @@ public class GameManager : MonoBehaviour
     {
         if(_instance == null)
         {
-        	//@Managers 가 존재하는지 확인
         	GameObject go = GameObject.Find("GameManager");
             //없으면 생성
             if(go == null)
@@ -31,7 +30,20 @@ public class GameManager : MonoBehaviour
     }
 
     public PoolManager PoolManager;
+    public BuffManager BuffManager;
 
     public int HP;
+    public float GameTime;
+    public float MaxTime;
     public StageName Stage;
+
+    private void Start() {
+        HP = 3;
+        MaxTime = 60;
+        GameTime = MaxTime;
+    }
+
+    void Update() {
+        GameTime -= Time.deltaTime;
+    }
 }

@@ -16,13 +16,13 @@ public class Spawner : MonoBehaviour
         // 현재 스테이지에 따라 스폰 주기 조절
         switch(GameManager.GetInstance().Stage) {
             case StageName.SLIMENEST:
-                _spawnTerm = 3;
+                _spawnTerm = 0.7f;
                 break;
             case StageName.BLABLADESART:
-                _spawnTerm = 3;
+                _spawnTerm = 0.5f;
                 break;
             case StageName.FORGOTTENFOREST:
-                _spawnTerm = 3;
+                _spawnTerm = 0.3f;
                 break;
         }
     }
@@ -40,13 +40,8 @@ public class Spawner : MonoBehaviour
     void Spawn() {
         GameObject go;
 
-        // 몬스터 8, 아이템 2의 비율로 스폰되게 설정
-        if(Random.Range(0, 100) <= 80) {
-            go = GameManager.GetInstance().PoolManager.GetItemWithIndex(SpawnType.ENEMY);
-        }
-        else {
-            go = GameManager.GetInstance().PoolManager.GetItemWithIndex(SpawnType.ITEM);
-        }
+        // 0이 enemy긴 한데.. enemy 프리팹 하나만 두고 SO로 데이터 꽂는 방식으로 하길 희망.....
+        go = GameManager.GetInstance().PoolManager.GetItemWithIndex(0);
 
         go.transform.position = new Vector3(Random.Range(-_rangeX, _rangeX), _posY, 0);
     }
