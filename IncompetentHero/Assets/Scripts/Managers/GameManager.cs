@@ -30,6 +30,7 @@ public class GameManager : MonoBehaviour
     }
 
     public PoolManager PoolManager;
+    public BuffManager BuffManager;
 
     public int HP;
     public float GameTime;

@@ -42,6 +42,27 @@ public class HUD : MonoBehaviour
                 _slider.value = GameManager.GetInstance().GameTime / GameManager.GetInstance().MaxTime;
                 break;
             case HUDType.BUFF:
+                // int buffCount = GameManager.GetInstance().BuffManager.BuffCount;
+                // for(int i = 0; i < transform.childCount; i++) {
+                //     if(transform.GetChild(i).gameObject.activeSelf) {
+                //         hp--;
+                //     }
+                // }
+
+                // // 현재 체력 < 표기된 체력
+                // if(hp < 0) {
+                //     for(int i = 0; i < transform.childCount; i++) {
+                //         if(transform.GetChild(i).gameObject.activeSelf) {
+                //             transform.GetChild(i).gameObject.SetActive(false);
+                //             break;
+                //         }
+                //     }
+                    
+                // }
+                // // 현재 체력 > 표기된 체력
+                // else if(hp > 0) {
+                //     GameManager.GetInstance().PoolManager.GetItemWithIndex(2).transform.parent = transform;
+                // }
 
                 break;
         }

@@ -8,14 +8,13 @@ public class Enemy : MonoBehaviour
     private EnemySO _enemySO;
     public EnemySO EnemySO { set { _enemySO = value; } }
 
-    private string _name;
     private SpriteRenderer _sprite;
     private Animator _anim;
 
     private void OnEnable() {
-        _name = _enemySO.EnemyName;
+        
     }
-
+    
     private void OnTriggerEnter2D(Collider2D other) {
         if(other.gameObject.CompareTag("Player")) {
             GameManager.GetInstance().HP--;

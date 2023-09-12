@@ -14,3 +14,10 @@ public enum HUDType {
     TIMER,
     BUFF
 }
+
+public enum BuffName {
+    BARRIER,
+    SPEEDUP,
+    CLEARENEMIES,
+    RECOVERY
+}
