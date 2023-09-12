@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    //[SerializeField]
-    private SpriteRenderer spriteRenderer;
+
+    [SerializeField]
+    private int health;
 
     [SerializeField]
     private float speed;
-    //private Vector2 moveDirection = Vector2.zero;
+
+    private SpriteRenderer spriteRenderer;
 
     private Vector2 moveVector = Vector2.zero;
 
@@ -28,7 +30,7 @@ public class Player : MonoBehaviour
     {
         moveVector.x = Input.GetAxisRaw("Horizontal");
 
-        Debug.Log("moveVector: " + moveVector);
+        //Debug.Log("moveVector: " + moveVector);
     }
 
     private void Move()
@@ -78,7 +80,22 @@ public class Player : MonoBehaviour
         if (collision.gameObject.tag == "Enemy")
         {
             Debug.Log("충돌했다.");
-            // 플레이어 HP를 감소시킨다.
+
+            TakeDamage();
+
+
         }
+    }
+
+    private void TakeDamage()
+    {
+        if (health <= 0)
+        {
+            Debug.Log("체력이 0이다.");
+        }
+        
+        health--;
+
+        Debug.Log("health: " + health);
     }
 }
