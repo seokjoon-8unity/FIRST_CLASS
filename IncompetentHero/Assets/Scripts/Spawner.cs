@@ -60,13 +60,13 @@ public class Spawner : MonoBehaviour
         switch(GameManager.GetInstance().Stage) {
             case StageName.SLIMENEST:
                 if(enemy) return _enemies[Random.Range(0, 2)];
-                else return _items[Random.Range(0, 1)];
+                else return _items[Random.Range(0, 4)];
             case StageName.BLABLADESART:
                 if(enemy) return _enemies[Random.Range(0, 1)];
-                else return _items[Random.Range(0, 1)];
+                else return _items[Random.Range(0, 4)];
             case StageName.FORGOTTENFOREST:
                 if(enemy) return _enemies[Random.Range(0, 1)];
-                else return _items[Random.Range(0, 1)];
+                else return _items[Random.Range(0, 4)];
         }
 
         return null;
