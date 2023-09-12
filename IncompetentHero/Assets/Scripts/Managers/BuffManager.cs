@@ -10,6 +10,6 @@ public class BuffManager : MonoBehaviour
     public void TakeBuff(BuffName buffName) {
         BuffSO buff = BuffPool[(int)buffName];
 
-        StartCoroutine(buff.AffectBuff);
+        StartCoroutine(buff.AffectBuff());
     }
 }

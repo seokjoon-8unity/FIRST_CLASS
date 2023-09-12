@@ -8,7 +8,6 @@ public class Barrier : BuffSO
     public override IEnumerator AffectBuff()
     {
         float remainTime = buffDuration;
-        originalSpeed = 1; //GameManager.GetInstance().Player.Pos;
 
         ApplyBarrier();
 

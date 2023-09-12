@@ -2176,7 +2176,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PoolManager: {fileID: 785048477}
-  BuffManager: {fileID: 0}
+  BuffManager: {fileID: 1299273256}
   HP: 0
   GameTime: 0
   MaxTime: 0
