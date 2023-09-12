@@ -40,8 +40,13 @@ public class Spawner : MonoBehaviour
     void Spawn() {
         GameObject go;
 
-        // 0이 enemy긴 한데.. enemy 프리팹 하나만 두고 SO로 데이터 꽂는 방식으로 하길 희망.....
-        go = GameManager.GetInstance().PoolManager.GetItemWithIndex(0);
+        // 80%로 몬스터, 20%로 아이템 생성
+        if(Random.Range(0, 100) < 80) {
+            go = GameManager.GetInstance().PoolManager.GetItemWithIndex(0);
+        }
+        else {
+            go = GameManager.GetInstance().PoolManager.GetItemWithIndex(1);
+        }
 
         go.transform.position = new Vector3(Random.Range(-_rangeX, _rangeX), _posY, 0);
     }
