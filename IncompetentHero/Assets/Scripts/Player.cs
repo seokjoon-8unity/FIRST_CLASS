@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    //[SerializeField]
+    private SpriteRenderer spriteRenderer;
+
     [SerializeField]
     private float speed;
     //private Vector2 moveDirection = Vector2.zero;
@@ -12,7 +15,7 @@ public class Player : MonoBehaviour
 
     void Start()
     {
-        
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     void Update()
@@ -31,6 +34,8 @@ public class Player : MonoBehaviour
     private void Move()
     {
         transform.Translate(moveVector * speed * Time.deltaTime);
+
+        SetSpriteFilp();
 
         ConstrainToCameraBounds();
     }
@@ -53,6 +58,19 @@ public class Player : MonoBehaviour
         }
 
         transform.position = Camera.main.ViewportToWorldPoint(viewPos);
+    }
+
+    private void SetSpriteFilp()
+    {
+        if (moveVector.x == 1)
+        {
+            spriteRenderer.flipX = false;
+        }
+
+        if (moveVector.x == -1)
+        {
+            spriteRenderer.flipX = true;
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
