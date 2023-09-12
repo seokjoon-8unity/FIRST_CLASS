@@ -34,7 +34,7 @@ public class HUD : MonoBehaviour
                 }
                 // 현재 체력 > 표기된 체력
                 else if(hp > 0) {
-                    GameManager.GetInstance().PoolManager.GetItemWithIndex(2).transform.parent = transform;
+                    //GameManager.GetInstance().PoolManager.GetItemWithIndex(2).transform.parent = transform;
                 }
 
                 break;

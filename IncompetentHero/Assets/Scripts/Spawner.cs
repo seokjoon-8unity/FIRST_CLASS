@@ -10,6 +10,8 @@ public class Spawner : MonoBehaviour
     [SerializeField] private float _rangeX = 2.5f;
     [SerializeField] private float _posY = 5;
 
+    [SerializeField] private List<FallableSO> _enemies;
+    [SerializeField] private List<FallableSO> _items;
 
 
     void Start() {

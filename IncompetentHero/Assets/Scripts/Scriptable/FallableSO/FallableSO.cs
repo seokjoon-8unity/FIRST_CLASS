@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "EnemySO", menuName = "Scriptable Object/EnemySO")]
-public class EnemySO : ScriptableObject
+[CreateAssetMenu(fileName = "FallableSO", menuName = "Scriptable Object/FallableSO")]
+public class FallableSO : ScriptableObject
 {
     [SerializeField]
-    private string _enemyName;
-    public string EnemyName { get { return _enemyName; } }
+    private string _name;
+    public string Name { get { return _name; } }
     
     [SerializeField]
     private int _spriteType;

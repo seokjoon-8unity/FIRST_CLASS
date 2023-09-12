@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    [SerializeField]
-    private EnemySO _enemySO;
-    public EnemySO EnemySO { set { _enemySO = value; } }
+    private FallableSO _enemySO;
+    public FallableSO EnemySO { set { _enemySO = value; } }
 
     private SpriteRenderer _sprite;
     private Animator _anim;
