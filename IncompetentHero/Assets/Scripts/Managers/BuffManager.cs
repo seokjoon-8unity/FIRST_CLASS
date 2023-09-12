@@ -14,7 +14,6 @@ public class BuffManager : MonoBehaviour
 
     public void TakeBuff(BuffType buffType) {
         BuffSO buff = BuffPool[(int)buffType];
-        
 
         StartCoroutine(buff.AffectBuff());
     }
