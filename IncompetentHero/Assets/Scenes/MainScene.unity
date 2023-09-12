@@ -528,7 +528,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fb604f8c79a9be44989cf84b75f3f22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  time: 0
 --- !u!1 &668690190
 GameObject:
   m_ObjectHideFlags: 0
@@ -658,7 +657,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Prefabs:
-  - {fileID: 720350622880682109, guid: 49ee3747a1d91d647a24351184edd263, type: 3}
+  - {fileID: 8260216823842423749, guid: aac619ad78e3d2e4db35275c2e2b2c7d, type: 3}
   - {fileID: 720350622880682109, guid: 49ee3747a1d91d647a24351184edd263, type: 3}
   - {fileID: 8196840669975082039, guid: 023a1bf1773df4f42b3ca203a71e2e6b, type: 3}
 --- !u!1 &823428041
@@ -901,7 +900,7 @@ GameObject:
   - component: {fileID: 1280092728}
   m_Layer: 0
   m_Name: Ground
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2177,6 +2176,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PoolManager: {fileID: 785048477}
   BuffManager: {fileID: 1299273256}
+  Player: {fileID: 189212503}
   HP: 0
   GameTime: 0
   MaxTime: 0

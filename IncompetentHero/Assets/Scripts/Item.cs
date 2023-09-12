@@ -2,18 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class Item : MonoBehaviour
 {
-    [SerializeField]
-    private EnemySO _enemySO;
-    public EnemySO EnemySO { set { _enemySO = value; } }
-
+    [SerializeField] private BuffType type;
     private SpriteRenderer _sprite;
     private Animator _anim;
     
     private void OnTriggerEnter2D(Collider2D other) {
         if(other.gameObject.CompareTag("Player")) {
-            GameManager.GetInstance().HP--;
+            GameManager.GetInstance().BuffManager.TakeBuff(type);
             gameObject.SetActive(false);
         }
         if(other.gameObject.CompareTag("Ground")) {

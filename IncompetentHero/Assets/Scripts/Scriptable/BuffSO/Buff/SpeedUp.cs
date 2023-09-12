@@ -12,7 +12,7 @@ public class SpeedUp : BuffSO
     public override IEnumerator AffectBuff()
     {
         float remainTime = buffDuration;
-        originalSpeed = 1; //GameManager.GetInstance().Player.moveSpeed;
+        originalSpeed = GameManager.GetInstance().Player.speed;
 
         ApplyFast();
 
@@ -26,11 +26,11 @@ public class SpeedUp : BuffSO
 
     private void ApplyFast()
     {
-        //GameManager.GetInstance().Player.moveSpeed += fastAmount;
+        GameManager.GetInstance().Player.speed += fastAmount;
     }
 
     private void RemoveFast()
     {
-        //GameManager.GetInstance().Player.moveSpeed = originalSpeed;
+        GameManager.GetInstance().Player.speed = originalSpeed;
     }
 }

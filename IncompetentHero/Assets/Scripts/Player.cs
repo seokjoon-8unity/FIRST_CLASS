@@ -6,7 +6,7 @@ public class Player : MonoBehaviour
 {
 
     [SerializeField]
-    private float speed;
+    public float speed;
 
     private SpriteRenderer spriteRenderer;
 
@@ -14,7 +14,7 @@ public class Player : MonoBehaviour
 
     void Start()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
     }
 
     void Update()
@@ -71,4 +71,5 @@ public class Player : MonoBehaviour
             spriteRenderer.flipX = true;
         }
     }
+
 }

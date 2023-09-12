@@ -15,7 +15,7 @@ public enum HUDType {
     BUFF
 }
 
-public enum BuffName {
+public enum BuffType {
     BARRIER,
     SPEEDUP,
     CLEARENEMIES,
