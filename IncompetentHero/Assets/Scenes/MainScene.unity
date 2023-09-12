@@ -200,9 +200,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 189212504}
-  - component: {fileID: 189212503}
   - component: {fileID: 189212506}
   - component: {fileID: 189212505}
+  - component: {fileID: 189212503}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -348,6 +348,11 @@ MonoBehaviour:
   _spawnTerm: 0.5
   _rangeX: 2.5
   _posY: 5
+  _enemies:
+  - {fileID: 11400000, guid: d886a10956334ea468ab870f6f1b2237, type: 2}
+  - {fileID: 11400000, guid: d16558ecca8a713419149464f235d78e, type: 2}
+  _items:
+  - {fileID: 11400000, guid: 3b2166ff3429e3346b72ca609f71bb13, type: 2}
 --- !u!1 &443401726
 GameObject:
   m_ObjectHideFlags: 0
@@ -553,7 +558,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 668690190}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.86, y: -3.2536614, z: -1.9592268}
+  m_LocalPosition: {x: 2.61, y: -3.2536614, z: -1.9592268}
   m_LocalScale: {x: 2.4669662, y: 2.6373677, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -657,8 +662,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Prefabs:
-  - {fileID: 8260216823842423749, guid: aac619ad78e3d2e4db35275c2e2b2c7d, type: 3}
   - {fileID: 720350622880682109, guid: 49ee3747a1d91d647a24351184edd263, type: 3}
+  - {fileID: 8260216823842423749, guid: aac619ad78e3d2e4db35275c2e2b2c7d, type: 3}
   - {fileID: 8196840669975082039, guid: 023a1bf1773df4f42b3ca203a71e2e6b, type: 3}
 --- !u!1 &823428041
 GameObject:
@@ -913,8 +918,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1280092726}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.4843, y: -5.6922, z: -1.9592268}
-  m_LocalScale: {x: 2.81625, y: 1.2741, z: 1}
+  m_LocalPosition: {x: 2.45, y: -7.84, z: -1.9592268}
+  m_LocalScale: {x: 2.3, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 443401727}

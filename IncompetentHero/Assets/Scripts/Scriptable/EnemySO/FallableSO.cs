@@ -10,8 +10,12 @@ public class FallableSO : ScriptableObject
     public string Name { get { return _name; } }
     
     [SerializeField]
-    private int _spriteType;
-    public int SpriteType { get { return _spriteType; } }
+    private SpawnType _spawnType;
+    public SpawnType SpawnType { get { return _spawnType; } }
+    
+    [SerializeField]
+    private int _id;
+    public int ID { get { return _id; } }
 
     [SerializeField]
     private StageName _stage;

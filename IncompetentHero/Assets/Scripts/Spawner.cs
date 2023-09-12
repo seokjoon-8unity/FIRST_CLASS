@@ -45,11 +45,30 @@ public class Spawner : MonoBehaviour
         // 80%로 몬스터, 20%로 아이템 생성
         if(Random.Range(0, 100) < 80) {
             go = GameManager.GetInstance().PoolManager.GetItemWithIndex(0);
+            go.GetComponent<Fallable>().Init(GetDataWithStage(true));
         }
         else {
             go = GameManager.GetInstance().PoolManager.GetItemWithIndex(1);
+            go.GetComponent<Fallable>().Init(GetDataWithStage(false));
+        }
+        
+        go.transform.parent = gameObject.transform;
+        go.transform.position = new Vector3(Random.Range(-_rangeX, _rangeX), _posY, 0);
+    }
+
+    FallableSO GetDataWithStage(bool enemy) {
+        switch(GameManager.GetInstance().Stage) {
+            case StageName.SLIMENEST:
+                if(enemy) return _enemies[Random.Range(0, 2)];
+                else return _items[Random.Range(0, 1)];
+            case StageName.BLABLADESART:
+                if(enemy) return _enemies[Random.Range(0, 1)];
+                else return _items[Random.Range(0, 1)];
+            case StageName.FORGOTTENFOREST:
+                if(enemy) return _enemies[Random.Range(0, 1)];
+                else return _items[Random.Range(0, 1)];
         }
 
-        go.transform.position = new Vector3(Random.Range(-_rangeX, _rangeX), _posY, 0);
+        return null;
     }
 }
