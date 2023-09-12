@@ -6,9 +6,6 @@ public class Player : MonoBehaviour
 {
 
     [SerializeField]
-    private int health;
-
-    [SerializeField]
     private float speed;
 
     private SpriteRenderer spriteRenderer;
@@ -43,7 +40,7 @@ public class Player : MonoBehaviour
     }
 
     /// <summary>
-    /// Ä«¸Þ¶ó °æ°è ¹ÛÀ¸·Î ÇÃ·¹ÀÌ¾î°¡ ¸ø ³ª°¡°Ô ÇÑ´Ù.
+    /// Ä«ï¿½Þ¶ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ã·ï¿½ï¿½Ì¾î°¡ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ñ´ï¿½.
     /// </summary>
     private void ConstrainToCameraBounds()
     {
@@ -73,29 +70,5 @@ public class Player : MonoBehaviour
         {
             spriteRenderer.flipX = true;
         }
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Enemy")
-        {
-            Debug.Log("Ãæµ¹Çß´Ù.");
-
-            TakeDamage();
-
-
-        }
-    }
-
-    private void TakeDamage()
-    {
-        if (health <= 0)
-        {
-            Debug.Log("Ã¼·ÂÀÌ 0ÀÌ´Ù.");
-        }
-        
-        health--;
-
-        Debug.Log("health: " + health);
     }
 }
