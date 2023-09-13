@@ -9,6 +9,16 @@ public class StageSelect : MonoBehaviour
     float minX = -5f; // x 좌표의 최소값
     float maxX = 13f; // x 좌표의 최대값
 
+    /*
+     * KimHyungSu
+     */
+    [SerializeField]
+    private int stage;
+
+    [SerializeField] private int minStage;
+    [SerializeField] private int maxStage;
+    //
+
     public void SelectRightStage()
     {
         // 현재 위치에서 오른쪽으로 이동
@@ -32,4 +42,13 @@ public class StageSelect : MonoBehaviour
         // 새로운 위치 설정
         player.transform.position = new Vector3(newX, player.transform.position.y, 0);
     }
+
+    /*
+     * KimHyungSu
+     */
+    private void StageUp()
+    {
+        stage++;
+    }
+    //
 }
