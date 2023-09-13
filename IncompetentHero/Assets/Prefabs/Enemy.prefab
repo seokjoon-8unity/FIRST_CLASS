@@ -122,6 +122,8 @@ MonoBehaviour:
   _animCon:
   - {fileID: 9100000, guid: e7cd6a83538f32f47a6c500ffee20e2d, type: 2}
   - {fileID: 22100000, guid: 3615d8f0817fba44e807aa22d22c372e, type: 2}
+  - {fileID: 22100000, guid: bf75ee988800842418d33fd567fbd167, type: 2}
+  - {fileID: 22100000, guid: 5f3f2bddc9b6f7a48a5475edef46f122, type: 2}
 --- !u!1 &6329989240383306758
 GameObject:
   m_ObjectHideFlags: 0
