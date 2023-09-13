@@ -23,6 +23,7 @@ public class PoolManager : MonoBehaviour
         foreach (var item in _pools[index]) {
             if(!item.activeSelf) {
                 select = item;
+
                 select.SetActive(true);
                 break;
             }

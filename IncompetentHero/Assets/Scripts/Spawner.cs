@@ -10,6 +10,8 @@ public class Spawner : MonoBehaviour
     [SerializeField] private float _rangeX = 2.5f;
     [SerializeField] private float _posY = 5;
 
+    [SerializeField] private List<FallableSO> _enemies;
+    [SerializeField] private List<FallableSO> _items;
 
 
     void Start() {
@@ -40,9 +42,33 @@ public class Spawner : MonoBehaviour
     void Spawn() {
         GameObject go;
 
-        // 0이 enemy긴 한데.. enemy 프리팹 하나만 두고 SO로 데이터 꽂는 방식으로 하길 희망.....
-        go = GameManager.GetInstance().PoolManager.GetItemWithIndex(0);
-
+        // 80%로 몬스터, 20%로 아이템 생성
+        if(Random.Range(0, 100) < 80) {
+            go = GameManager.GetInstance().PoolManager.GetItemWithIndex(0);
+            go.GetComponent<Fallable>().Init(GetDataWithStage(true));
+        }
+        else {
+            go = GameManager.GetInstance().PoolManager.GetItemWithIndex(1);
+            go.GetComponent<Fallable>().Init(GetDataWithStage(false));
+        }
+        
+        go.transform.parent = gameObject.transform;
         go.transform.position = new Vector3(Random.Range(-_rangeX, _rangeX), _posY, 0);
+    }
+
+    FallableSO GetDataWithStage(bool enemy) {
+        switch(GameManager.GetInstance().Stage) {
+            case StageName.SLIMENEST:
+                if(enemy) return _enemies[Random.Range(0, 2)];
+                else return _items[Random.Range(0, 4)];
+            case StageName.BLABLADESART:
+                if(enemy) return _enemies[Random.Range(0, 1)];
+                else return _items[Random.Range(0, 4)];
+            case StageName.FORGOTTENFOREST:
+                if(enemy) return _enemies[Random.Range(0, 1)];
+                else return _items[Random.Range(0, 4)];
+        }
+
+        return null;
     }
 }
