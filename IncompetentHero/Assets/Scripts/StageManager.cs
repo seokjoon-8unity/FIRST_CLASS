@@ -55,6 +55,10 @@ public class StageManager : MonoBehaviour
     }
 
     
+    public int GetStage()
+    {
+        return stage;
+    }
 
     public void StageUp()
     {

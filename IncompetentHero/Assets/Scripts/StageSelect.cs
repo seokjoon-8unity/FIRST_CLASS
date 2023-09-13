@@ -47,5 +47,35 @@ public class StageSelect : MonoBehaviour
         player.transform.position = new Vector3(newX, player.transform.position.y, 0);
     }
 
-    
+    /*
+     * KimHyungSu
+     */
+    public void SelectStartStage()
+    {
+        int stage = StageManager.Instance.GetStage();
+
+        switch (stage)
+        {
+            case 1:
+                Debug.Log("SelectStartStage() case 1 호출");
+                break;
+
+            case 2:
+                Debug.Log("SelectStartStage() case 2 호출");
+                break;
+
+            case 3:
+                Debug.Log("SelectStartStage() case 3 호출");
+                break;
+
+            case 4:
+                Debug.Log("SelectStartStage() case 4 호출");
+                break;
+
+            default:
+                Debug.Log("SelectStartStage() default 호출");
+                break;
+        }
+    }
+    //
 }
