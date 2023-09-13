@@ -22,6 +22,7 @@ public class Enemy : Fallable
     
     protected override void PlayerTrigger() {
         GameManager.GetInstance().HP -= 1;
+        GameManager.GetInstance().Player.SetHitTrigger();
 
         _rigid.isKinematic = true;
         _rigid.velocity = Vector3.zero;
@@ -37,6 +38,15 @@ public class Enemy : Fallable
 
         Invoke("SetActiveFalse", 0.3f);
     }
+
+    protected override void BarrierTrigger() {
+        _rigid.isKinematic = true;
+        _rigid.velocity = Vector3.zero;
+        _anim.SetBool("IsDead", true);
+
+        Invoke("SetActiveFalse", 0.3f);
+    }
+
     void SetActiveFalse() {
         gameObject.SetActive(false);
     }

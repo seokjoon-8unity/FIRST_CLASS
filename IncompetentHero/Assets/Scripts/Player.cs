@@ -9,9 +9,13 @@ public class Player : MonoBehaviour
     public float speed;
 
     private SpriteRenderer spriteRenderer;
+    private Animator _anim;
 
     private Vector2 moveVector = Vector2.zero;
 
+    private void Awake() {
+        _anim = GetComponentInChildren<Animator>();
+    }
     void Start()
     {
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
@@ -72,4 +76,7 @@ public class Player : MonoBehaviour
         }
     }
 
+    public void SetHitTrigger() {
+        _anim.SetTrigger("HitTrigger");
+    }
 }

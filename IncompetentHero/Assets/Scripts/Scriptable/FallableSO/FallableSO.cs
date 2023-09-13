@@ -10,10 +10,6 @@ public class FallableSO : ScriptableObject
     public string Name { get { return _name; } }
     
     [SerializeField]
-    private SpawnType _spawnType;
-    public SpawnType SpawnType { get { return _spawnType; } }
-    
-    [SerializeField]
     private int _id;
     public int ID { get { return _id; } }
 

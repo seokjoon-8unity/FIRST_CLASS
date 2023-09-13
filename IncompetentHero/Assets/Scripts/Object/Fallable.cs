@@ -13,11 +13,14 @@ public abstract class Fallable : MonoBehaviour
         if(other.gameObject.CompareTag("Ground")) {
             GroundTrigger();
         }
-        
+        if(other.gameObject.CompareTag("Barrier")) {
+            BarrierTrigger();
+        }
         
     }
     
     public abstract void Init(FallableSO data);
     protected abstract void PlayerTrigger();
     protected abstract void GroundTrigger();
+    protected abstract void BarrierTrigger();
 }

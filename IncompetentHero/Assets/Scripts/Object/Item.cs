@@ -25,4 +25,10 @@ public class Item : Fallable
     protected override void GroundTrigger() {
         gameObject.SetActive(false);
     }
+
+    protected override void BarrierTrigger() {
+        GameManager.GetInstance().BuffManager.TakeBuff(type);
+        
+        gameObject.SetActive(false);
+    }
 }
