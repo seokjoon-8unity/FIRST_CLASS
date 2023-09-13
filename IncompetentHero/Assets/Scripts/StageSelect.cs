@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class StageSelect : MonoBehaviour
 {
@@ -57,19 +58,23 @@ public class StageSelect : MonoBehaviour
         switch (stage)
         {
             case 1:
-                Debug.Log("SelectStartStage() case 1 호출");
+                //Debug.Log("SelectStartStage() case 1 호출");
+                SceneManager.LoadScene("Stage1");
                 break;
 
             case 2:
-                Debug.Log("SelectStartStage() case 2 호출");
+                //Debug.Log("SelectStartStage() case 2 호출");
+                SceneManager.LoadScene("Stage2");
                 break;
 
             case 3:
-                Debug.Log("SelectStartStage() case 3 호출");
+                //Debug.Log("SelectStartStage() case 3 호출");
+                SceneManager.LoadScene("Stage3");
                 break;
 
             case 4:
-                Debug.Log("SelectStartStage() case 4 호출");
+                //Debug.Log("SelectStartStage() case 4 호출");
+                SceneManager.LoadScene("Stage4");
                 break;
 
             default:
