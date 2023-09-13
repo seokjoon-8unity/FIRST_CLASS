@@ -6,15 +6,24 @@ public class BuffManager : MonoBehaviour
 {
     // 모든 버프(SO) 다 올려둠
     [SerializeField] private List<BuffSO> BuffPool;
-    private float[] BuffRemainTime;
+    public bool[] InUse;
 
     private void Start() {
-        BuffRemainTime = new float[BuffPool.Count];
+        InUse = new bool[BuffPool.Count];
     }
 
     public void TakeBuff(BuffType buffType) {
         BuffSO buff = BuffPool[(int)buffType];
 
-        StartCoroutine(buff.AffectBuff());
+        if(InUse[(int)buffType]) {
+            buff.AddTick();
+        }
+        else {
+            StartCoroutine(buff.AffectBuff());
+        }
+    }
+
+    public BuffSO GetBuffSO(int index) {
+        return BuffPool[index];
     }
 }

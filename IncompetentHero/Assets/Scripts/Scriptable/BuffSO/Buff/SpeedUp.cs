@@ -11,17 +11,20 @@ public class SpeedUp : BuffSO
 
     public override IEnumerator AffectBuff()
     {
-        float remainTime = buffDuration;
+        GameManager.GetInstance().BuffManager.InUse[(int)BuffType.SPEEDUP] = true;
+        buffTick = buffDuration;
+
         originalSpeed = GameManager.GetInstance().Player.speed;
 
         ApplyFast();
 
-        while (remainTime > 0) {
-            remainTime -= 1;
-            yield return new WaitForSeconds(1);
+        while (buffTick > 0) {
+            buffTick -= 0.1f;
+            yield return new WaitForSeconds(0.1f);
         }
 
         RemoveFast();
+        GameManager.GetInstance().BuffManager.InUse[(int)BuffType.SPEEDUP] = false;
     }
 
     private void ApplyFast()

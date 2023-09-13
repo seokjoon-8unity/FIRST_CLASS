@@ -9,7 +9,11 @@ public class Recover : BuffSO
 
     public override IEnumerator AffectBuff()
     {
+        GameManager.GetInstance().BuffManager.InUse[(int)BuffType.RECOVERY] = true;
+
         GameManager.GetInstance().HP += RecoveryAmount;
         yield return null;
+
+        GameManager.GetInstance().BuffManager.InUse[(int)BuffType.RECOVERY] = false;
     }
 }
