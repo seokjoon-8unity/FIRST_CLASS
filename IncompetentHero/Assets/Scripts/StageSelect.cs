@@ -9,18 +9,15 @@ public class StageSelect : MonoBehaviour
     float minX = -5f; // x 좌표의 최소값
     float maxX = 13f; // x 좌표의 최대값
 
-    /*
-     * KimHyungSu
-     */
-    [SerializeField]
-    private int stage;
-
-    [SerializeField] private int minStage;
-    [SerializeField] private int maxStage;
-    //
-
     public void SelectRightStage()
     {
+
+        /*
+         * KimHyungSu
+         */
+        StageManager.Instance.StageUp();
+        //
+
         // 현재 위치에서 오른쪽으로 이동
         float newX = player.transform.position.x + 6f;
 
@@ -33,6 +30,13 @@ public class StageSelect : MonoBehaviour
 
     public void SelectLeftStage()
     {
+
+        /*
+         * KimHyungSu
+         */
+        StageManager.Instance.StageDown();
+        //
+
         // 현재 위치에서 왼쪽으로 이동
         float newX = player.transform.position.x - 6f;
 
@@ -43,12 +47,5 @@ public class StageSelect : MonoBehaviour
         player.transform.position = new Vector3(newX, player.transform.position.y, 0);
     }
 
-    /*
-     * KimHyungSu
-     */
-    private void StageUp()
-    {
-        stage++;
-    }
-    //
+    
 }
