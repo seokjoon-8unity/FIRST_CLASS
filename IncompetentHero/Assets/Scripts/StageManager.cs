@@ -54,11 +54,7 @@ public class StageManager : MonoBehaviour
         
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 
     public void StageUp()
     {
@@ -66,7 +62,7 @@ public class StageManager : MonoBehaviour
 
         stage = Mathf.Clamp(stage, minStage, maxStage);
 
-        Debug.Log(stage);
+        //Debug.Log(stage);
     }
 
     public void StageDown()
@@ -75,7 +71,7 @@ public class StageManager : MonoBehaviour
 
         stage = Mathf.Clamp(stage, minStage, maxStage);
 
-        Debug.Log(stage);
+        //Debug.Log(stage);
     }
     
 }
