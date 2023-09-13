@@ -5,10 +5,15 @@ using UnityEngine;
 public class BuffManager : MonoBehaviour
 {
     // 모든 버프(SO) 다 올려둠
-    public List<BuffSO> BuffPool;
+    [SerializeField] private List<BuffSO> BuffPool;
+    private float[] BuffRemainTime;
 
-    public void TakeBuff(BuffName buffName) {
-        BuffSO buff = BuffPool[(int)buffName];
+    private void Start() {
+        BuffRemainTime = new float[BuffPool.Count];
+    }
+
+    public void TakeBuff(BuffType buffType) {
+        BuffSO buff = BuffPool[(int)buffType];
 
         StartCoroutine(buff.AffectBuff());
     }
