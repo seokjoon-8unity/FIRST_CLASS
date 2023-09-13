@@ -9,16 +9,18 @@ public class Barrier : BuffSO
     private Vector3 _offset = new Vector3(0, 1, 0);
     public override IEnumerator AffectBuff()
     {
-        float remainTime = buffDuration;
+        GameManager.GetInstance().BuffManager.InUse[(int)BuffType.BARRIER] = true;
+        buffTick = buffDuration;
 
         ApplyBarrier();
 
-        while (remainTime > 0) {
-            remainTime -= 1;
-            yield return new WaitForSeconds(1);
+        while (buffTick > 0) {
+            buffTick -= 0.1f;
+            yield return new WaitForSeconds(0.1f);
         }
 
         RemoveBarrier();
+        GameManager.GetInstance().BuffManager.InUse[(int)BuffType.BARRIER] = false;
     }
 
     private void ApplyBarrier()
