@@ -658,6 +658,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
+  _buffs: []
+  _buffCoverImages: []
 --- !u!1 &1280092726
 GameObject:
   m_ObjectHideFlags: 0
@@ -822,6 +824,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 1cc74a0939a2bfd4aa19e3deb66dec4d, type: 2}
   - {fileID: 11400000, guid: 2ec9cf383a9e38a48bb6142fa412cac9, type: 2}
   - {fileID: 11400000, guid: ae3109fdf4a62244bb7879bb8436d9eb, type: 2}
+  InUse: 
 --- !u!4 &1299273257
 Transform:
   m_ObjectHideFlags: 0
@@ -1445,6 +1448,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 2
+  _buffs: []
+  _buffCoverImages: []
 --- !u!1 &1788567111
 GameObject:
   m_ObjectHideFlags: 0
@@ -1710,6 +1715,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 1
+  _buffs: []
+  _buffCoverImages: []
 --- !u!1 &2079272635
 GameObject:
   m_ObjectHideFlags: 0
@@ -1825,7 +1832,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PoolManager: {fileID: 785048477}
   BuffManager: {fileID: 1299273256}
-  Player: {fileID: 0}
+  Player: {fileID: 1449138470}
   HP: 0
   GameTime: 0
   MaxTime: 0
