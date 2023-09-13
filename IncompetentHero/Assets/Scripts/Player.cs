@@ -40,7 +40,7 @@ public class Player : MonoBehaviour
     }
 
     /// <summary>
-    /// ī�޶� ��� ������ �÷��̾ �� ������ �Ѵ�.
+    /// 
     /// </summary>
     private void ConstrainToCameraBounds()
     {
