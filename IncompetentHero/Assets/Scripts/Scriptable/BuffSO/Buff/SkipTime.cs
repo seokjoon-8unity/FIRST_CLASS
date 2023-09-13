@@ -9,7 +9,11 @@ public class SkipTime : BuffSO
 
     public override IEnumerator AffectBuff()
     {
+        GameManager.GetInstance().BuffManager.InUse[(int)BuffType.SPEEDUP] = true;
+
         GameManager.GetInstance().GameTime -= skipAmount;
         yield return null;
+
+        GameManager.GetInstance().BuffManager.InUse[(int)BuffType.SPEEDUP] = false;
     }
 }
