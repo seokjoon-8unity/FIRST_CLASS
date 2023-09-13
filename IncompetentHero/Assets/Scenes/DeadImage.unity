@@ -509,7 +509,7 @@ GameObject:
   - component: {fileID: 516386842}
   - component: {fileID: 516386845}
   m_Layer: 5
-  m_Name: Retry Button
+  m_Name: Exit Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -581,8 +581,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 516386845}
-        m_TargetAssemblyTypeName: DeadImageStageButton, Assembly-CSharp
-        m_MethodName: Change
+        m_TargetAssemblyTypeName: DeadImageExitButton, Assembly-CSharp
+        m_MethodName: OnclickQuit
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -639,7 +639,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 516386840}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfd275bf61441bf49b3a286eb06c17c2, type: 3}
+  m_Script: {fileID: 11500000, guid: 802bef7029b0e0a4ea2e5174e0da4ad7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &590997284
@@ -1218,7 +1218,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -500}
+  m_AnchoredPosition: {x: 0, y: -609}
   m_SizeDelta: {x: 450, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1723408762
@@ -1241,7 +1241,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 8678331415430427435, guid: 4d701fb8bab94204e92af20e3e7b6a8a, type: 3}
+  m_Sprite: {fileID: 973039004434376389, guid: 4d26d16e892a0404997808fcd0adf334, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1544,7 +1544,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: retry
+  m_text: Exit
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 81a7bebffb4a3284fb79d22c2ca881fc, type: 2}
   m_sharedMaterial: {fileID: -3263877076116846866, guid: 81a7bebffb4a3284fb79d22c2ca881fc, type: 2}

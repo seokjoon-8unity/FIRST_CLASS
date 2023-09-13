@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: RW Attack
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: -4068256151103285213, guid: 4d701fb8bab94204e92af20e3e7b6a8a, type: 3}
+  m_Sprite: {fileID: -4068256151103285213, guid: 4d26d16e892a0404997808fcd0adf334, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1

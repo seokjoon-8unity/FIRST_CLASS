@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,7 +8,7 @@ public class DeadImageMainButton : MonoBehaviour
 {
     public void Change()
     {
-        SceneManager.LoadScene("Intro");
+        SceneManager.LoadScene("MainMenu");
     }
 
 }
