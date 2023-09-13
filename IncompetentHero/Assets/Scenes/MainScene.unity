@@ -668,6 +668,7 @@ MonoBehaviour:
   - {fileID: 720350622880682109, guid: 49ee3747a1d91d647a24351184edd263, type: 3}
   - {fileID: 720350622880682109, guid: 60caf2d2a7c534f48809dda3dc4fe007, type: 3}
   - {fileID: 8196840669975082039, guid: 023a1bf1773df4f42b3ca203a71e2e6b, type: 3}
+  - {fileID: 909642669428930956, guid: c2f332aa1ff010b48a35df608b5d8b1a, type: 3}
 --- !u!1 &823428041
 GameObject:
   m_ObjectHideFlags: 0
@@ -1057,6 +1058,8 @@ MonoBehaviour:
   BuffPool:
   - {fileID: 11400000, guid: ec19464f28341fa48b8bcb956e95d7be, type: 2}
   - {fileID: 11400000, guid: 1cc74a0939a2bfd4aa19e3deb66dec4d, type: 2}
+  - {fileID: 11400000, guid: 2ec9cf383a9e38a48bb6142fa412cac9, type: 2}
+  - {fileID: 11400000, guid: ae3109fdf4a62244bb7879bb8436d9eb, type: 2}
 --- !u!4 &1299273257
 Transform:
   m_ObjectHideFlags: 0
