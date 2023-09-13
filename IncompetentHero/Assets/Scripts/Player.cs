@@ -6,15 +6,19 @@ public class Player : MonoBehaviour
 {
 
     [SerializeField]
-    private float speed;
+    public float speed;
 
     private SpriteRenderer spriteRenderer;
+    private Animator _anim;
 
     private Vector2 moveVector = Vector2.zero;
 
+    private void Awake() {
+        _anim = GetComponentInChildren<Animator>();
+    }
     void Start()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
     }
 
     void Update()
@@ -70,5 +74,9 @@ public class Player : MonoBehaviour
         {
             spriteRenderer.flipX = true;
         }
+    }
+
+    public void SetHitTrigger() {
+        _anim.SetTrigger("HitTrigger");
     }
 }

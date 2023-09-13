@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 5640336839674960081}
   - component: {fileID: 7068409798951960921}
   - component: {fileID: 5679631622498922927}
-  - component: {fileID: 1979352306006721216}
+  - component: {fileID: -5129263473665806308}
   m_Layer: 0
-  m_Name: Enemy
+  m_Name: Item
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -107,7 +107,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.61896265, y: 0.45945847}
   m_EdgeRadius: 0
---- !u!114 &1979352306006721216
+--- !u!114 &-5129263473665806308
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -116,12 +116,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 720350622880682109}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9a0c862b8905af4cbd3182f914d7bed, type: 3}
+  m_Script: {fileID: 11500000, guid: 2f70f2b1b6e3c8646a1ac0c809a4374e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _animCon:
-  - {fileID: 9100000, guid: e7cd6a83538f32f47a6c500ffee20e2d, type: 2}
-  - {fileID: 22100000, guid: 3615d8f0817fba44e807aa22d22c372e, type: 2}
+  _sprites:
+  - {fileID: 1773063345, guid: 45f328e8e4e12ff4096eadbda4f047bb, type: 3}
+  - {fileID: -1584406141, guid: 45f328e8e4e12ff4096eadbda4f047bb, type: 3}
+  - {fileID: 812815908, guid: 45f328e8e4e12ff4096eadbda4f047bb, type: 3}
+  - {fileID: -1098064786, guid: 45f328e8e4e12ff4096eadbda4f047bb, type: 3}
 --- !u!1 &6329989240383306758
 GameObject:
   m_ObjectHideFlags: 0

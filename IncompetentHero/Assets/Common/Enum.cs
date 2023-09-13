@@ -1,8 +1,3 @@
-public enum SpawnType {
-    ENEMY,
-    ITEM
-}
-
 public enum StageName {
     SLIMENEST,
     BLABLADESART,
@@ -15,7 +10,7 @@ public enum HUDType {
     BUFF
 }
 
-public enum BuffName {
+public enum BuffType {
     BARRIER,
     SPEEDUP,
     CLEARENEMIES,
