@@ -1,7 +1,8 @@
 public enum StageName {
-    SLIMENEST,
-    BLABLADESART,
-    FORGOTTENFOREST
+    PLAIN,
+    GRAVE,
+    SPACE,
+    CASTLE
 }
 
 public enum HUDType {

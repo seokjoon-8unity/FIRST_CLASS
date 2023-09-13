@@ -17,13 +17,13 @@ public class Spawner : MonoBehaviour
     void Start() {
         // 현재 스테이지에 따라 스폰 주기 조절
         switch(GameManager.GetInstance().Stage) {
-            case StageName.SLIMENEST:
+            case StageName.PLAIN:
                 _spawnTerm = 0.7f;
                 break;
-            case StageName.BLABLADESART:
+            case StageName.GRAVE:
                 _spawnTerm = 0.5f;
                 break;
-            case StageName.FORGOTTENFOREST:
+            case StageName.SPACE:
                 _spawnTerm = 0.3f;
                 break;
         }
@@ -58,13 +58,13 @@ public class Spawner : MonoBehaviour
 
     FallableSO GetDataWithStage(bool enemy) {
         switch(GameManager.GetInstance().Stage) {
-            case StageName.SLIMENEST:
+            case StageName.PLAIN:
                 if(enemy) return _enemies[Random.Range(0, 4)];
                 else return _items[Random.Range(0, 4)];
-            case StageName.BLABLADESART:
+            case StageName.GRAVE:
                 if(enemy) return _enemies[Random.Range(0, 1)];
                 else return _items[Random.Range(0, 4)];
-            case StageName.FORGOTTENFOREST:
+            case StageName.SPACE:
                 if(enemy) return _enemies[Random.Range(0, 1)];
                 else return _items[Random.Range(0, 4)];
         }

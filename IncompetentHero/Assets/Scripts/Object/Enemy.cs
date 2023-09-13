@@ -21,7 +21,7 @@ public class Enemy : Fallable
     }    
     
     protected override void PlayerTrigger() {
-        GameManager.GetInstance().HP -= 1;
+        GameManager.GetInstance().ChangeHP(-1);
         GameManager.GetInstance().Player.SetHitTrigger();
 
         _rigid.isKinematic = true;
