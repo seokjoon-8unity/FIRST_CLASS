@@ -7,5 +7,9 @@ AnimatorOverrideController:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Zombie
-  m_Controller: {fileID: 0}
-  m_Clips: []
+  m_Controller: {fileID: 9100000, guid: e7cd6a83538f32f47a6c500ffee20e2d, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 5b4fc2a80f1aade4097fa64da0ee3d53, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 0d68ef63faeb8b849b2d87dfe1a3266e, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: ec5c4056ae6499244ae06345c5db8b2d, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 105c23560cb01664694e0e1ba3ed05e7, type: 2}

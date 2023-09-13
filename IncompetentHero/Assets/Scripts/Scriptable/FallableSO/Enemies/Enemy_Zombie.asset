@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc69f0fe2776a694094e9ad004f6a475, type: 3}
   m_Name: Enemy_Zombie
   m_EditorClassIdentifier: 
-  _name: 
-  _id: 0
+  _name: "\uC880\uBE44"
+  _id: 3
   _stage: 0
