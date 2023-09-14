@@ -775,7 +775,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uAC00\uC18C\uB86D\uAD6C\uB098!!\n\uC6A9\uC0AC\uC5EC!!"
+  m_text: "\uC5B4\uB9AC\uC11D\uAD6C\uB098!!\n\uC6A9\uC0AC\uC5EC!!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 08637f1f57e70ea43be5d7072af75621, type: 2}
   m_sharedMaterial: {fileID: 940912946840647374, guid: 08637f1f57e70ea43be5d7072af75621, type: 2}
@@ -3500,7 +3500,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1760825101}
           m_TargetAssemblyTypeName: SceneController, Assembly-CSharp
-          m_MethodName: SwitchScene
+          m_MethodName: Ending
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
