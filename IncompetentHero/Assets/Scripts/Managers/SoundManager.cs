@@ -25,23 +25,23 @@ public class SoundManager : MonoBehaviour
             //instance 할당
             _instance = go.GetComponent<SoundManager>();
         }
-        
+
         return _instance;
     }
 
     [Header("BGM")]
     [SerializeField] private AudioClip[] _bgmClips;
-    public float _bgmVolume;
-    private AudioSource bgmPlayer;
+    private float _bgmVolume;
+    private AudioSource _bgmPlayer;
 
 
     [Header("SFX")]
-    public float _sfxVolume;
+    private float _sfxVolume;
     [SerializeField] private int _sfxChannels;
     private int _sfxIndex;
-    private AudioSource[] sfxPlayers;
+    private AudioSource[] _sfxPlayers;
 
-    // 유일한 dontde라 여기에 저장
+    // 유일한 dontdty라 여기에 저장
     public int Stage;
     
     void Awake() {
@@ -71,34 +71,34 @@ public class SoundManager : MonoBehaviour
         // 배경음 플레이어 세팅
         GameObject bgmObject = new GameObject("BgmPlayer");
         bgmObject.transform.parent = transform;
-        bgmPlayer = bgmObject.AddComponent<AudioSource>();
-        bgmPlayer.playOnAwake = false;
-        bgmPlayer.loop = true;
-        bgmPlayer.volume = _bgmVolume;
+        _bgmPlayer = bgmObject.AddComponent<AudioSource>();
+        _bgmPlayer.playOnAwake = false;
+        _bgmPlayer.loop = true;
+        _bgmPlayer.volume = _bgmVolume;
 
         // 효과음 플레이어 세팅
         GameObject sfxObject = new GameObject("SfxPlayer");
         sfxObject.transform.parent = transform;
-        sfxPlayers = new AudioSource[_sfxChannels];
+        _sfxPlayers = new AudioSource[_sfxChannels];
         for (int i = 0; i < _sfxChannels; i++) {
-            sfxPlayers[i] = sfxObject.AddComponent<AudioSource>();
-            sfxPlayers[i].playOnAwake = false;
-            sfxPlayers[i].volume = _sfxVolume;
+            _sfxPlayers[i] = sfxObject.AddComponent<AudioSource>();
+            _sfxPlayers[i].playOnAwake = false;
+            _sfxPlayers[i].volume = _sfxVolume;
         } 
     }
 
     // BGM 변경
     public void ChangeBGM(StageName stage) {
-        if(bgmPlayer.isPlaying)
-            bgmPlayer.Stop();
+        if(_bgmPlayer.isPlaying)
+            _bgmPlayer.Stop();
         
-        bgmPlayer.clip = _bgmClips[(int)stage];
-        bgmPlayer.Play();
+        _bgmPlayer.clip = _bgmClips[(int)stage];
+        _bgmPlayer.Play();
     }
 
     public void StopBGM() {
-        if(bgmPlayer.isPlaying)
-            bgmPlayer.Stop();
+        if(_bgmPlayer.isPlaying)
+            _bgmPlayer.Stop();
     }
 
     // 빈 플레이어를 찾아서 클립 할당 후 재생
@@ -106,12 +106,23 @@ public class SoundManager : MonoBehaviour
         for(int i = 0; i < _sfxChannels; i++) {
             int loopIndex = (i + _sfxIndex) % _sfxChannels;
 
-            if(sfxPlayers[loopIndex].isPlaying)
+            if(_sfxPlayers[loopIndex].isPlaying)
                 continue;
 
-            sfxPlayers[loopIndex].clip = sfxClip;
-            sfxPlayers[loopIndex].Play();
+            _sfxPlayers[loopIndex].clip = sfxClip;
+            _sfxPlayers[loopIndex].Play();
             break;
+        }
+    }
+
+    public void ChangeVolume(bool isBGM, float value) {
+        if(isBGM) {
+            _bgmPlayer.volume = value;
+        }
+        else {
+            for (int i = 0; i < _sfxChannels; i++) {
+                _sfxPlayers[i].volume = value;
+            }
         }
     }
 }
