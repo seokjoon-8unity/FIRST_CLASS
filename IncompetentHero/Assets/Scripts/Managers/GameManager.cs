@@ -57,7 +57,7 @@ public class GameManager : MonoBehaviour
         GameTime -= Time.deltaTime;
         if(GameTime <= 0) {
             // 게임 성공
-            SceneManager.LoadScene("DeadImage");
+            ClearGame();
         }
     }
 
@@ -67,6 +67,23 @@ public class GameManager : MonoBehaviour
         if(HP <= 0) {
             // 게임 실패
             SceneManager.LoadScene("DeadImage");
+        }
+    }
+
+    void ClearGame() {
+        switch(Stage) {
+            case StageName.PLAIN:
+                SceneManager.LoadScene("CutScene_Stage1");
+                break;
+            case StageName.RIFT:
+                SceneManager.LoadScene("CutScene_Stage2");
+                break;
+            case StageName.SPACE:
+                SceneManager.LoadScene("CutScene_Stage3_After");
+                break;
+            case StageName.CASTLE:
+                SceneManager.LoadScene("CutScene_Stage4_After");
+                break;
         }
     }
 }
