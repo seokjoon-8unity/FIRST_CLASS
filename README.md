@@ -37,7 +37,7 @@ FIRST_CLASS
   * 플레이어 로직   
 
 ---
-#### 기획 및 와이어프레임
+### 기획 및 와이어프레임
 ![와이어프레임](https://teamsparta.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F83c75a39-3aba-4ba4-a792-7aefe4b07895%2Fa95b38bc-ecb7-4824-afb5-0a2738f096a1%2F%25EC%2599%2580%25EC%259D%25B4%25EC%2596%25B4%25ED%2594%2584%25EB%25A0%2588%25EC%259E%2584.png?table=block&id=48623883-1b53-4134-b291-2607c16d4a83&spaceId=83c75a39-3aba-4ba4-a792-7aefe4b07895&width=2000&userId=&cache=v2)
 ![기획](https://teamsparta.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F83c75a39-3aba-4ba4-a792-7aefe4b07895%2F866db465-3a7e-451b-af9b-4b4c94b0054a%2F%25EA%25B8%25B0%25ED%259A%258D.png?table=block&id=5846ac84-966b-4e0e-9fc0-c6cc70828fbf&spaceId=83c75a39-3aba-4ba4-a792-7aefe4b07895&width=2000&userId=&cache=v2)   
     
