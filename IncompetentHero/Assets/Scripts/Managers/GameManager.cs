@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -46,5 +47,18 @@ public class GameManager : MonoBehaviour
 
     void Update() {
         GameTime -= Time.deltaTime;
+        if(GameTime <= 0) {
+            // 게임 성공
+            SceneManager.LoadScene("DeadImage");
+        }
+    }
+
+    public void ChangeHP(int hp) {
+        HP += hp;
+
+        if(HP <= 0) {
+            // 게임 실패
+            SceneManager.LoadScene("DeadImage");
+        }
     }
 }
