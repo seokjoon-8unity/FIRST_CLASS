@@ -44,9 +44,13 @@ public class GameManager : MonoBehaviour
         Init();
     }
 
+    private void Start() {
+        SoundManager.GetInstance().ChangeBGM(Stage);
+    }
+
     void Init() {
         HP = 3;
-        MaxTime = 60;
+        MaxTime = 45;
         GameTime = MaxTime;
         Stage = (StageName)(SoundManager.GetInstance().Stage);
 
@@ -66,11 +70,14 @@ public class GameManager : MonoBehaviour
 
         if(HP <= 0) {
             // 게임 실패
+            SoundManager.GetInstance().StopBGM();
             SceneManager.LoadScene("DeadImage");
         }
     }
 
     void ClearGame() {
+        SoundManager.GetInstance().StopBGM();
+
         switch(Stage) {
             case StageName.PLAIN:
                 SceneManager.LoadScene("CutScene_Stage1");

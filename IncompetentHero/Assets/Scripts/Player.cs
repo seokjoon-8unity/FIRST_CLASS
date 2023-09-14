@@ -4,21 +4,30 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-
-    [SerializeField]
     public float speed;
-
-    private SpriteRenderer spriteRenderer;
     private Animator _anim;
+    [SerializeField] protected RuntimeAnimatorController[] _animCon;
+    private SpriteRenderer _spriteRenderer;
 
     private Vector2 moveVector = Vector2.zero;
 
     private void Awake() {
         _anim = GetComponentInChildren<Animator>();
+        _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
     }
     void Start()
     {
-        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        switch(GameManager.GetInstance().Stage) {
+            case StageName.PLAIN:
+            case StageName.RIFT:
+            case StageName.CASTLE:
+                _anim.runtimeAnimatorController = _animCon[0];
+                break;
+            case StageName.SPACE:
+                _anim.runtimeAnimatorController = _animCon[1];
+                break;
+        }
+        
     }
 
     void Update()
@@ -67,12 +76,12 @@ public class Player : MonoBehaviour
     {
         if (moveVector.x == 1)
         {
-            spriteRenderer.flipX = false;
+            _spriteRenderer.flipX = false;
         }
 
         if (moveVector.x == -1)
         {
-            spriteRenderer.flipX = true;
+            _spriteRenderer.flipX = true;
         }
     }
 

@@ -8,15 +8,15 @@ public class StageSelect : MonoBehaviour
     [SerializeField] GameObject player;
     [SerializeField] AudioClip clip;
 
-    int minStage = 0; // 1 스테이지
-    int maxStage = 3; // 3 스테이지
+    int _minStage = 0; // 1 스테이지
+    int _maxStage = 3; // 4 스테이지
 
     public void SelectRightStage()
     {
         ref int stg = ref SoundManager.GetInstance().Stage;
 
         stg += 1;
-        stg = Mathf.Min(stg, maxStage);
+        stg = Mathf.Min(stg, _maxStage);
 
         float newX = 6 * stg - 5;
 
@@ -28,7 +28,7 @@ public class StageSelect : MonoBehaviour
         ref int stg = ref SoundManager.GetInstance().Stage;
 
         stg -= 1;
-        stg = Mathf.Max(stg, minStage);
+        stg = Mathf.Max(stg, _minStage);
 
         float newX = 6 * stg - 5;
 

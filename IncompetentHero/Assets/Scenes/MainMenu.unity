@@ -3854,8 +3854,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc6cfd5e5b6732a41b61b6f9931f49b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _bgmClips: []
-  _bgmVolume: 1
+  _bgmClips:
+  - {fileID: 8300000, guid: 4665b3f25d1144046b83ae7123d36ad9, type: 3}
+  - {fileID: 8300000, guid: f264683abf1c54640ae15095d1231f75, type: 3}
+  - {fileID: 8300000, guid: 8eb4d6f1c0e943e4c9a5d80fd62a4853, type: 3}
+  - {fileID: 8300000, guid: 4fa159b13ad45894a9bedc6fa662593c, type: 3}
+  _bgmVolume: 0.5
   _sfxVolume: 1
   _sfxChannels: 10
   Stage: 0
@@ -6043,6 +6047,7 @@ GameObject:
   - component: {fileID: 1962963367}
   - component: {fileID: 1962963366}
   - component: {fileID: 1962963365}
+  - component: {fileID: 1962963368}
   m_Layer: 5
   m_Name: New Game Button
   m_TagString: Untagged
@@ -6139,6 +6144,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1962963368}
+        m_TargetAssemblyTypeName: ButtonSFX, Assembly-CSharp
+        m_MethodName: PlaySFX
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &1962963366
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6177,6 +6194,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1962963363}
   m_CullTransparentMesh: 1
+--- !u!114 &1962963368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1962963363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcead93e4ffcf1a46b0db4089a77a12b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _clip: {fileID: 0}
 --- !u!1 &1973911752
 GameObject:
   m_ObjectHideFlags: 0
