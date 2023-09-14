@@ -38,6 +38,7 @@ public class GameManager : MonoBehaviour
     public float GameTime;
     public float MaxTime;
     public StageName Stage;
+    [SerializeField] private List<GameObject> _maps;
 
     private void Awake() {
         Init();
@@ -47,7 +48,9 @@ public class GameManager : MonoBehaviour
         HP = 3;
         MaxTime = 60;
         GameTime = MaxTime;
-        Stage = (StageName)(SoundManager.GetInstance().Stage - 1);
+        Stage = (StageName)(SoundManager.GetInstance().Stage);
+
+        _maps[(int)Stage].SetActive(true);
     }
 
     void Update() {
