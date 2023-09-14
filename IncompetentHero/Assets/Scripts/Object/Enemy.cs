@@ -4,16 +4,18 @@ using UnityEngine;
 
 public class Enemy : Fallable
 {
-    protected Animator _anim;
+    private Animator _anim;
     [SerializeField] protected RuntimeAnimatorController[] _animCon;
 
     private void Awake() {
         _rigid = GetComponent<Rigidbody2D>();
         _anim = GetComponentInChildren<Animator>();
+
     }
 
     public override void Init(FallableSO data) {
         _anim.runtimeAnimatorController = _animCon[data.ID];
+        _hitSFX = _clips[data.ID];
     }
     private void OnEnable() {
         _rigid.isKinematic = false;
@@ -21,14 +23,14 @@ public class Enemy : Fallable
     }    
     
     protected override void PlayerTrigger() {
-        GameManager.GetInstance().HP -= 1;
+        GameManager.GetInstance().ChangeHP(-1);
         GameManager.GetInstance().Player.SetHitTrigger();
 
         _rigid.isKinematic = true;
         _rigid.velocity = Vector3.zero;
         _anim.SetBool("IsDead", true);
 
-        Invoke("SetActiveFalse", 0.3f);
+        Invoke("SetActiveFalse", 0.5f);
     }
 
     protected override void GroundTrigger() {

@@ -6,81 +6,53 @@ using UnityEngine.SceneManagement;
 public class StageSelect : MonoBehaviour
 {
     [SerializeField] GameObject player;
+    [SerializeField] AudioClip clip;
 
-    float minX = -5f; // x ÁÂÇ¥ÀÇ ÃÖ¼Ò°ª
-    float maxX = 13f; // x ÁÂÇ¥ÀÇ ÃÖ´ë°ª
+    int minStage = 0; // 1 ìŠ¤í…Œì´ì§€
+    int maxStage = 3; // 3 ìŠ¤í…Œì´ì§€
 
     public void SelectRightStage()
     {
+        ref int stg = ref SoundManager.GetInstance().Stage;
 
-        /*
-         * KimHyungSu
-         */
-        StageManager.Instance.StageUp();
-        //
+        stg += 1;
+        stg = Mathf.Min(stg, maxStage);
 
-        // ÇöÀç À§Ä¡¿¡¼­ ¿À¸¥ÂÊÀ¸·Î ÀÌµ¿
-        float newX = player.transform.position.x + 6f;
+        float newX = 6 * stg - 5;
 
-        // x ÁÂÇ¥°¡ ÃÖ´ë°ªÀ» ³ÑÁö ¾Êµµ·Ï Á¦ÇÑ
-        newX = Mathf.Min(newX, maxX);
-
-        // »õ·Î¿î À§Ä¡ ¼³Á¤
         player.transform.position = new Vector3(newX, player.transform.position.y, 0);
     }
 
     public void SelectLeftStage()
     {
+        ref int stg = ref SoundManager.GetInstance().Stage;
 
-        /*
-         * KimHyungSu
-         */
-        StageManager.Instance.StageDown();
-        //
+        stg -= 1;
+        stg = Mathf.Max(stg, minStage);
 
-        // ÇöÀç À§Ä¡¿¡¼­ ¿ŞÂÊÀ¸·Î ÀÌµ¿
-        float newX = player.transform.position.x - 6f;
+        float newX = 6 * stg - 5;
 
-        // x ÁÂÇ¥°¡ ÃÖ¼Ò°ªÀ» ³ÑÁö ¾Êµµ·Ï Á¦ÇÑ
-        newX = Mathf.Max(newX, minX);
-
-        // »õ·Î¿î À§Ä¡ ¼³Á¤
         player.transform.position = new Vector3(newX, player.transform.position.y, 0);
     }
 
-    /*
-     * KimHyungSu
-     */
-    public void SelectStartStage()
-    {
-        int stage = StageManager.Instance.GetStage();
-
-        switch (stage)
-        {
+    public void Join() {
+        switch(SoundManager.GetInstance().Stage + 1) {
             case 1:
-                //Debug.Log("SelectStartStage() case 1 È£Ãâ");
-                SceneManager.LoadScene("CutScene_Stage1");
-                break;
-
             case 2:
-                //Debug.Log("SelectStartStage() case 2 È£Ãâ");
-                SceneManager.LoadScene("CutScene_Stage2");
+                SceneManager.LoadScene("MainScene");
                 break;
-
             case 3:
-                //Debug.Log("SelectStartStage() case 3 È£Ãâ");
                 SceneManager.LoadScene("CutScene_Stage3_Before");
                 break;
-
             case 4:
-                //Debug.Log("SelectStartStage() case 4 È£Ãâ");
-                SceneManager.LoadScene("Stage4");
-                break;
-
-            default:
-                Debug.Log("SelectStartStage() default È£Ãâ");
+                SceneManager.LoadScene("CutScene_Stage4_Before");
                 break;
         }
     }
-    //
+
+    public void BtnClickSound()
+    {
+        SoundManager.GetInstance().PlaySFX(clip);
+    }
+    
 }

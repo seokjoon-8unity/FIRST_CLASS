@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -37,14 +38,52 @@ public class GameManager : MonoBehaviour
     public float GameTime;
     public float MaxTime;
     public StageName Stage;
+    [SerializeField] private List<GameObject> _maps;
 
-    private void Start() {
+    private void Awake() {
+        Init();
+    }
+
+    void Init() {
         HP = 3;
         MaxTime = 60;
         GameTime = MaxTime;
+        Stage = (StageName)(SoundManager.GetInstance().Stage);
+
+        _maps[(int)Stage].SetActive(true);
     }
 
     void Update() {
         GameTime -= Time.deltaTime;
+        if(GameTime <= 0) {
+            // 게임 성공
+            ClearGame();
+        }
+    }
+
+    public void ChangeHP(int hp) {
+        HP += hp;
+
+        if(HP <= 0) {
+            // 게임 실패
+            SceneManager.LoadScene("DeadImage");
+        }
+    }
+
+    void ClearGame() {
+        switch(Stage) {
+            case StageName.PLAIN:
+                SceneManager.LoadScene("CutScene_Stage1");
+                break;
+            case StageName.RIFT:
+                SceneManager.LoadScene("CutScene_Stage2");
+                break;
+            case StageName.SPACE:
+                SceneManager.LoadScene("CutScene_Stage3_After");
+                break;
+            case StageName.CASTLE:
+                SceneManager.LoadScene("CutScene_Stage4_After");
+                break;
+        }
     }
 }

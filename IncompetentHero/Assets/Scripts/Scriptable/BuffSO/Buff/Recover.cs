@@ -11,7 +11,7 @@ public class Recover : BuffSO
     {
         GameManager.GetInstance().BuffManager.InUse[(int)BuffType.RECOVERY] = true;
 
-        GameManager.GetInstance().HP += RecoveryAmount;
+        GameManager.GetInstance().ChangeHP(RecoveryAmount);
         yield return null;
 
         GameManager.GetInstance().BuffManager.InUse[(int)BuffType.RECOVERY] = false;

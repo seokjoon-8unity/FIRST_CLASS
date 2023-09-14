@@ -6,8 +6,26 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 8f502bdf93d619749bd00837be4ecb4a
+  - enabled: 1
     path: Assets/Scenes/CutScene_Intro.unity
     guid: 4f9b19dbb6d48864e81ef43420cc376b
+  - enabled: 1
+    path: Assets/Scenes/CutScene_Stage1.unity
+    guid: 68164852251b37e43b4f7f2d8b726412
+  - enabled: 1
+    path: Assets/Scenes/CutScene_Stage2.unity
+    guid: 1573c378b40676845b9a1352e19ad714
+  - enabled: 1
+    path: Assets/Scenes/CutScene_Stage3_After.unity
+    guid: 90fabe14e9115f145ae4ed6159bf6b3c
+  - enabled: 1
+    path: Assets/Scenes/CutScene_Stage3_Before.unity
+    guid: fe0686b57284d914da2731f02ffb9751
+  - enabled: 1
+    path: Assets/Scenes/DeadImage.unity
+    guid: 21b6c524306f27341be04d9f35dc5ca8
   - enabled: 1
     path: Assets/Scenes/MainScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
@@ -15,18 +33,30 @@ EditorBuildSettings:
     path: Assets/Scenes/StageSelect.unity
     guid: 51dfa2ea8c6e5ce4b9ffd9cd1a7cb7d6
   - enabled: 1
-    path: Assets/Scenes/KimHyungSu/KHS_StageSelect.unity
-    guid: 79e1e04e1df1acf4f99db6fb3e550d62
+    path: Assets/Scenes/MainScene.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/Stage1.unity
-    guid: 2405b30c6d828dd4abf341723e020fcd
+    path: Assets/Scenes/CutScene_Stage1.unity
+    guid: 68164852251b37e43b4f7f2d8b726412
   - enabled: 1
-    path: Assets/Scenes/Stage2.unity
-    guid: e5e7b3d9895515848a7fb95192a1a5aa
+    path: Assets/Scenes/CutScene_Stage2.unity
+    guid: 1573c378b40676845b9a1352e19ad714
   - enabled: 1
-    path: Assets/Scenes/Stage3.unity
-    guid: 863ca4c1c352bd74b92560f74bbd7af8
+    path: Assets/Scenes/CutScene_Stage3_After.unity
+    guid: 90fabe14e9115f145ae4ed6159bf6b3c
   - enabled: 1
-    path: Assets/Scenes/Stage4.unity
-    guid: 05394b324f2a15549b8d54a791d263f0
+    path: Assets/Scenes/CutScene_Stage3_Before.unity
+    guid: fe0686b57284d914da2731f02ffb9751
+  - enabled: 1
+    path: Assets/Scenes/CutScene_Stage4_After.unity
+    guid: 5e6ecfd5bcdab34428ae8c03d49f76b4
+  - enabled: 1
+    path: Assets/Scenes/CutScene_Stage4_Before.unity
+    guid: ae4866c3f45516148aaaad5765cce818
+  - enabled: 1
+    path: Assets/Scenes/CutScene_Ending.unity
+    guid: 599caf3fedce9094f9f12fc5f4e82e8c
+  - enabled: 1
+    path: Assets/Scenes/DeadImage.unity
+    guid: 21b6c524306f27341be04d9f35dc5ca8
   m_configObjects: {}

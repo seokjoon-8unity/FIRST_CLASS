@@ -15,6 +15,7 @@ public class Item : Fallable
     public override void Init(FallableSO data) {
         _spriteRenderer.sprite = _sprites[data.ID];
         type = (BuffType)data.ID;
+        _hitSFX = _clips[data.ID];
     }
 
     protected override void PlayerTrigger() {
