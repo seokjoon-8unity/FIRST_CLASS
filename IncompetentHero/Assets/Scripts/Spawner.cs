@@ -62,7 +62,7 @@ public class Spawner : MonoBehaviour
     FallableSO GetDataWithStage(bool enemy) {
         switch(GameManager.GetInstance().Stage) {
             case StageName.PLAIN:
-                if(enemy) return _enemies[Random.Range(0, 9)];
+                if(enemy) return _enemies[Random.Range(0, 2)];
                 else return _items[Random.Range(0, 4)];
             case StageName.RIFT:
                 if(enemy) return _enemies[Random.Range(2, 4)];

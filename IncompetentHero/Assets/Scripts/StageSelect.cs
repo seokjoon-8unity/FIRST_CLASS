@@ -46,7 +46,6 @@ public class StageSelect : MonoBehaviour
             case 4:
                 SceneManager.LoadScene("CutScene_Stage4_Before");
                 break;
-            
         }
     }
 }
