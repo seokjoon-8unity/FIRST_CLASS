@@ -39,10 +39,15 @@ public class GameManager : MonoBehaviour
     public float MaxTime;
     public StageName Stage;
 
-    private void Start() {
+    private void Awake() {
+        Init();
+    }
+
+    void Init() {
         HP = 3;
         MaxTime = 60;
         GameTime = MaxTime;
+        Stage = (StageName)(SoundManager.GetInstance().Stage - 1);
     }
 
     void Update() {
