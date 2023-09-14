@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class StageSelect : MonoBehaviour
 {
     [SerializeField] GameObject player;
+    [SerializeField] AudioClip clip;
 
     int minStage = 0; // 1 스테이지
     int maxStage = 3; // 3 스테이지
@@ -48,4 +49,10 @@ public class StageSelect : MonoBehaviour
                 break;
         }
     }
+
+    public void BtnClickSound()
+    {
+        SoundManager.GetInstance().PlaySFX(clip);
+    }
+    
 }
