@@ -37,13 +37,9 @@ public class SceneController : MonoBehaviour
         SceneManager.LoadScene("CutScene_Ending");
     }
 
-    public void GoToStage3()
+    public void GoToStage()
     {
-        // 스테이지 3로 가는 로직
+        SceneManager.LoadScene("MainScene");
     }
 
-    public void GoToStage4()
-    { 
-        // 스테이지 4로 가는 로직
-    }
 }
