@@ -59,17 +59,17 @@ public class StageSelect : MonoBehaviour
         {
             case 1:
                 //Debug.Log("SelectStartStage() case 1 호출");
-                SceneManager.LoadScene("Stage1");
+                SceneManager.LoadScene("CutScene_Stage1");
                 break;
 
             case 2:
                 //Debug.Log("SelectStartStage() case 2 호출");
-                SceneManager.LoadScene("Stage2");
+                SceneManager.LoadScene("CutScene_Stage2");
                 break;
 
             case 3:
                 //Debug.Log("SelectStartStage() case 3 호출");
-                SceneManager.LoadScene("Stage3");
+                SceneManager.LoadScene("CutScene_Stage3_Before");
                 break;
 
             case 4:
