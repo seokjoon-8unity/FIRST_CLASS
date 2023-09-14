@@ -119,6 +119,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9a0c862b8905af4cbd3182f914d7bed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _clips:
+  - {fileID: 8300000, guid: 40d8a01709faa6c42b68ec640cc32a6e, type: 3}
+  - {fileID: 8300000, guid: 40d8a01709faa6c42b68ec640cc32a6e, type: 3}
+  - {fileID: 8300000, guid: b01e23464ab1d6b42a325d18bb9c07d1, type: 3}
+  - {fileID: 8300000, guid: b01e23464ab1d6b42a325d18bb9c07d1, type: 3}
+  - {fileID: 8300000, guid: 467459d8db85ae647a3f8b7ce7158530, type: 3}
+  - {fileID: 8300000, guid: 467459d8db85ae647a3f8b7ce7158530, type: 3}
+  - {fileID: 8300000, guid: bafe8b311a885ed46843e91353ebb18a, type: 3}
+  - {fileID: 8300000, guid: bafe8b311a885ed46843e91353ebb18a, type: 3}
+  - {fileID: 8300000, guid: bafe8b311a885ed46843e91353ebb18a, type: 3}
   _animCon:
   - {fileID: 9100000, guid: e7cd6a83538f32f47a6c500ffee20e2d, type: 2}
   - {fileID: 22100000, guid: 3615d8f0817fba44e807aa22d22c372e, type: 2}

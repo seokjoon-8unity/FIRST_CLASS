@@ -119,6 +119,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f70f2b1b6e3c8646a1ac0c809a4374e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _clips:
+  - {fileID: 8300000, guid: dc19f642807b5bc4faef18b20134d696, type: 3}
+  - {fileID: 8300000, guid: dc19f642807b5bc4faef18b20134d696, type: 3}
+  - {fileID: 8300000, guid: dc19f642807b5bc4faef18b20134d696, type: 3}
+  - {fileID: 8300000, guid: dc19f642807b5bc4faef18b20134d696, type: 3}
   _sprites:
   - {fileID: 1773063345, guid: 45f328e8e4e12ff4096eadbda4f047bb, type: 3}
   - {fileID: -1584406141, guid: 45f328e8e4e12ff4096eadbda4f047bb, type: 3}

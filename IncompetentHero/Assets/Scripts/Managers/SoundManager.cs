@@ -25,7 +25,7 @@ public class SoundManager : MonoBehaviour
             //instance 할당
             _instance = go.GetComponent<SoundManager>();
         }
-
+        
         return _instance;
     }
 
@@ -45,6 +45,25 @@ public class SoundManager : MonoBehaviour
     public int Stage;
     
     void Awake() {
+        if(_instance == null)
+        {
+        	GameObject go = GameObject.Find("SoundManager");
+            //없으면 생성
+            if(go == null)
+            {
+            	go = new GameObject { name = "SoundManager" };
+            }
+            if(go.GetComponent<SoundManager>() == null)
+            {
+            	go.AddComponent<SoundManager>();
+            }
+
+            DontDestroyOnLoad(go);
+            
+            //instance 할당
+            _instance = go.GetComponent<SoundManager>();
+        }
+        
         Init();
     }
 

@@ -5,8 +5,12 @@ using UnityEngine;
 public abstract class Fallable : MonoBehaviour
 {
     protected Rigidbody2D _rigid;
+    [SerializeField] protected AudioClip[] _clips;
+    protected AudioClip _hitSFX;
 
     protected void OnTriggerEnter2D(Collider2D other) {
+        SoundManager.GetInstance().PlaySFX(_hitSFX);
+
         if(other.gameObject.CompareTag("Player")) {
             PlayerTrigger();
         }
@@ -16,7 +20,6 @@ public abstract class Fallable : MonoBehaviour
         if(other.gameObject.CompareTag("Barrier")) {
             BarrierTrigger();
         }
-        
     }
     
     public abstract void Init(FallableSO data);
