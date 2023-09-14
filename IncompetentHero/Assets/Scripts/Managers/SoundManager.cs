@@ -5,16 +5,28 @@ using UnityEngine;
 public class SoundManager : MonoBehaviour
 {    
     private static SoundManager _instance;
-    public static SoundManager Instance
+    public static SoundManager GetInstance()
     {
-        get
+        if(_instance == null)
         {
-            if (null == _instance)
+        	GameObject go = GameObject.Find("SoundManager");
+            //없으면 생성
+            if(go == null)
             {
-                return null;
+            	go = new GameObject { name = "SoundManager" };
             }
-            return _instance;
+            if(go.GetComponent<SoundManager>() == null)
+            {
+            	go.AddComponent<SoundManager>();
+            }
+
+            DontDestroyOnLoad(go);
+            
+            //instance 할당
+            _instance = go.GetComponent<SoundManager>();
         }
+
+        return _instance;
     }
 
     [Header("BGM")]
@@ -28,18 +40,11 @@ public class SoundManager : MonoBehaviour
     [SerializeField] private int _sfxChannels;
     private int _sfxIndex;
     private AudioSource[] sfxPlayers;
+
+    // 유일한 dontde라 여기에 저장
+    public int Stage;
     
     void Awake() {
-        if (null == _instance)
-        {
-            _instance = this;
-            DontDestroyOnLoad(this.gameObject);
-        }
-        else
-        {
-            Destroy(this.gameObject);
-        }
-
         Init();
     }
 

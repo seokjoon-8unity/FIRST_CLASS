@@ -9,6 +9,10 @@ public class BuffManager : MonoBehaviour
     public bool[] InUse;
 
     private void Start() {
+        Init();
+    }
+
+    void Init() {
         InUse = new bool[BuffPool.Count];
     }
 
