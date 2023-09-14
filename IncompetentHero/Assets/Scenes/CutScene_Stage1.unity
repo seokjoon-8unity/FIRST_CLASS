@@ -3699,7 +3699,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1584323952}
           m_TargetAssemblyTypeName: SceneController, Assembly-CSharp
-          m_MethodName: SwitchScene
+          m_MethodName: GoToSelectScene
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
