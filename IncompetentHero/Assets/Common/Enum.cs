@@ -1,6 +1,6 @@
 public enum StageName {
     PLAIN,
-    GRAVE,
+    RIFT,
     SPACE,
     CASTLE
 }

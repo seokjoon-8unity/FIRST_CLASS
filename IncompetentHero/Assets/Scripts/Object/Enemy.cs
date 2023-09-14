@@ -28,7 +28,7 @@ public class Enemy : Fallable
         _rigid.velocity = Vector3.zero;
         _anim.SetBool("IsDead", true);
 
-        Invoke("SetActiveFalse", 0.3f);
+        Invoke("SetActiveFalse", 0.5f);
     }
 
     protected override void GroundTrigger() {

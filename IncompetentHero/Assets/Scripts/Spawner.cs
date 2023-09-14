@@ -20,11 +20,14 @@ public class Spawner : MonoBehaviour
             case StageName.PLAIN:
                 _spawnTerm = 0.7f;
                 break;
-            case StageName.GRAVE:
+            case StageName.RIFT:
                 _spawnTerm = 0.5f;
                 break;
             case StageName.SPACE:
                 _spawnTerm = 0.3f;
+                break;
+            case StageName.CASTLE:
+                _spawnTerm = 0.2f;
                 break;
         }
     }
@@ -59,13 +62,16 @@ public class Spawner : MonoBehaviour
     FallableSO GetDataWithStage(bool enemy) {
         switch(GameManager.GetInstance().Stage) {
             case StageName.PLAIN:
-                if(enemy) return _enemies[Random.Range(0, 4)];
+                if(enemy) return _enemies[Random.Range(0, 9)];
                 else return _items[Random.Range(0, 4)];
-            case StageName.GRAVE:
-                if(enemy) return _enemies[Random.Range(0, 1)];
+            case StageName.RIFT:
+                if(enemy) return _enemies[Random.Range(2, 4)];
                 else return _items[Random.Range(0, 4)];
             case StageName.SPACE:
-                if(enemy) return _enemies[Random.Range(0, 1)];
+                if(enemy) return _enemies[Random.Range(4, 6)];
+                else return _items[Random.Range(0, 4)];
+            case StageName.CASTLE:
+                if(enemy) return _enemies[Random.Range(6, 9)];
                 else return _items[Random.Range(0, 4)];
         }
 
